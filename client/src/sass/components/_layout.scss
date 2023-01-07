@@ -1,0 +1,22 @@
+.layout {
+    &__content{
+        // margin: 1rem 0;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 0;
+
+        &__outlet {
+            padding: 1rem 1rem 0 1rem;
+
+            @include mobile-tablet {
+                padding: 0;
+            }
+        }
+
+        @include mobile-tablet {
+            grid-template-columns: 1fr;
+            max-width: 95vw;
+            margin: 1rem auto;
+        }
+    }
+}

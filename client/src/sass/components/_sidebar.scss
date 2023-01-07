@@ -1,0 +1,103 @@
+.sidebar {
+    width: $sidebar-width;
+    height: calc(100vh - 4rem);
+    box-shadow: $box-shadow;
+    padding: 1rem 0 1rem 1rem;
+    overflow: auto;
+    display: flex;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 4rem;
+
+    &.active {
+        transform: translateX(0);
+    }
+
+    @include mobile-tablet {
+        position: fixed;
+        top: $nav-hight;
+        left: 0;
+        z-index: 10;
+        background-color: $white-color;
+        transform: translateX(-120%);
+        transition: $transition;
+
+        // position: -webkit-sticky;
+        // position: sticky;
+        // top: 4rem;
+    }
+
+    &__icon {
+        font-size: 1rem;
+        color: $red-color-dark;
+        position: absolute;
+        top: 1.5rem;
+        right: 1rem;
+        display: none;
+
+        @include mobile-tablet {
+            display: block;
+        }
+    }
+
+    &__name {
+        text-transform: uppercase;
+        font-size: 1rem;
+        color: $txt-color-second;
+        margin-top: 0.5rem;
+    }
+
+    &__content {
+        padding-left: 0.5rem;
+        @include flex(center, start);
+        color: $txt-color-second;
+        text-transform: capitalize;
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+        cursor: pointer;
+        border-radius: 5px;
+        &:hover {
+            background-color: $btn-hover-color;
+        }
+        span {
+            display: flex;
+            align-items: center;
+            margin-right: 0.5rem;
+        }
+
+        &.active {
+            background-color: $btn-hover-color;
+        }
+    }
+
+    &--dark {
+        background-color: $dark-mode-color;
+        .sidebar {
+            &__content {
+                &:hover {
+                    background-color: $dark-mode-color-hover;
+                }
+
+                &.active {
+                    background-color: $dark-mode-color-hover;
+                }
+            }
+        }
+    }
+}
+
+// .dark.sidebar,
+// .dark.sidebar.active {
+//     background-color: $dark-mode-color;
+//     .sidebar__container__item {
+//         &__content {
+//             &:hover {
+//                 background-color: $dark-mode-color-hover;
+//             }
+
+//             &.active {
+//                 background-color: $dark-mode-color-hover;
+//             }
+//         }
+//     }
+// }

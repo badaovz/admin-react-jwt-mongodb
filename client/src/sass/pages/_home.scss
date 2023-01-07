@@ -1,0 +1,17 @@
+.home {
+    padding: 1rem;
+    @include mobile-tablet {
+        padding: 0;
+    }
+    &__featured {
+        padding: 1rem 0;
+        display: grid;
+        grid-template-columns: auto 50vw;
+        gap: 0 2rem;
+
+        @include mobile-tablet {
+            grid-template-columns: 1fr;
+            gap: 2rem 0;
+        }
+    }
+}

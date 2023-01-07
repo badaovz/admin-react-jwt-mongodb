@@ -1,0 +1,56 @@
+.featured {
+    padding: 1rem;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow-light;
+
+    &__header {
+        @include flex(center, space-between);
+    }
+    &__icon {
+        color: $txt-color-primary;
+        cursor: pointer;
+    }
+
+    &__content {
+        font-size: 1rem;
+        color: $txt-color-second;
+        text-align: center;
+    }
+    &__circle {
+        width: 100px !important;
+        height: 100px;
+    }
+
+    &__total {
+        font-size: 2rem;
+        margin: 0.5rem 0;
+    }
+
+    &__note {
+        font-size: 0.8rem;
+    }
+
+    &__footer {
+        @include flex(center, space-around);
+        font-size: 1rem;
+        color: $txt-color-second;
+        text-transform: capitalize;
+        p {
+            @include flex(center, center);
+        }
+    }
+
+    &__items {
+        height: 4.5rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__item {
+        margin-top: auto;
+        color: $green-color-dark;
+        &--target {
+            color: $red-color-dark;
+        }
+    }
+}

@@ -1,0 +1,50 @@
+.compInfo {
+    position: relative;
+    box-shadow: $box-shadow-light;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    border-radius: $border-radius;
+    color: $txt-color-second;
+
+    &__edit {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 0.2rem;
+        // color: $icon-color-light;
+        background-color: $violet-color-light;
+        border-bottom-left-radius: $border-radius;
+    }
+
+    &__title {
+        font-size: 1.5rem;
+        // color: $txt-color-second;
+        margin-bottom: 0.5rem;
+    }
+
+    &__container {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 0 1rem;
+    }
+
+    &__img {
+        margin-top: 1rem;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    &__content {
+        text-align: start;
+        font-size: 1rem;
+        // color: $black-color;
+
+        span,
+        h3 {
+            color: $txt-color-second;
+            font-weight: bold;
+        }
+    }
+}

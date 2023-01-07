@@ -1,0 +1,104 @@
+.table {
+    font-size: 1rem;
+    width: calc(100vw - 286px);
+    margin: 0 auto;
+    @include mobile-tablet {
+        width: 95vw;
+    }
+
+    &__header {
+        padding: 1.5rem 0;
+        @include flex(center, space-between);
+    }
+
+    &__title {
+        font-size: 1.5rem;
+    }
+
+    &__btn {
+        padding: 0.5rem 2rem;
+        color: $green-color-dark;
+        border-radius: $border-radius;
+        background-color: $green-color-light;
+
+        &:hover {
+            color: $white-color;
+            background-color: $green-color-dark;
+        }
+    }
+
+    &__main {
+        display: block;
+        height: 100vh;
+        @include tablet {
+            height: 70vh;
+        }
+    }
+
+    &__datagrid {
+        padding: 0 1rem;
+        // background-color: #fff;
+    }
+}
+
+.cellWithImg {
+    @include flex(center, center);
+    &__img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 0.5rem;
+    }
+}
+
+.cellWithStatus {
+    &.active {
+        padding: 0.3rem;
+        color: $green-color-dark;
+        border-radius: $border-radius;
+        background-color: $green-color-light;
+    }
+    &.passive {
+        padding: 0.3rem;
+        color: $red-color-dark;
+        border-radius: $border-radius;
+        background-color: $red-color-light;
+    }
+    &.pending {
+        padding: 0.3rem;
+        color: $orange-color-dark;
+        border-radius: $border-radius;
+        background-color: $orange-color-light;
+    }
+}
+
+.cellAction {
+    &__viewBtn {
+        padding: 0.3rem;
+        font-size: 1rem;
+        color: $blue-color;
+        margin-right: 0.5rem;
+        text-transform: capitalize;
+        border: 1px dotted $blue-color;
+        border-radius: $border-radius;
+
+        &:hover {
+            color: $white-color;
+            background-color: $blue-color;
+        }
+    }
+
+    &__deleteBtn {
+        padding: 0.3rem;
+        font-size: 1rem;
+        cursor: pointer;
+        color: $red-color-dark;
+        background-color: transparent;
+        border-radius: $border-radius;
+        border: 1px dotted $red-color-dark;
+        &:hover {
+            color: $white-color;
+            background-color: $red-color-dark;
+        }
+    }
+}

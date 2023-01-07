@@ -1,0 +1,77 @@
+.login {
+    padding: 1rem 2rem;
+    box-shadow: $box-shadow-light;
+    min-width: 500px;
+    text-align: center;
+    margin-top: 4rem;
+
+    @include mobile-tablet {
+        min-width: 90vw;
+    }
+
+    &__title {
+        font-size: 1.5rem;
+        color: $txt-color-second;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    &__form {
+        .form-group {
+            &__item {
+                text-align: start;
+                margin-bottom: 1rem;
+            }
+            &__label {
+                display: block;
+                font-size: 1rem;
+                color: $txt-color-second;
+            }
+
+            &__input {
+                position: relative;
+                input {
+                    font-size: 1rem;
+                    padding: 0.2rem 0.5rem;
+                    width: 100%;
+                }
+            }
+            &__icon {
+                position: absolute;
+                top: 0;
+                right: 0;
+                color: $txt-color-primary;
+                padding: 0.2rem 2rem 0 0;
+                display: none;
+                cursor: pointer;
+
+                &.show {
+                    display: block;
+                }
+            }
+
+            &__message {
+                color: red;
+                margin-top: 0.2rem;
+            }
+
+            &__more {
+                font-size: 0.8rem;
+                color: $blue-color;
+                @include flex(center, space-between);
+                margin-bottom: 2rem;
+                cursor: pointer;
+            }
+
+            &__btn {
+                font-size: 1rem;
+                letter-spacing: 0.1rem;
+                color: $white-color;
+                background-color: $blue-color;
+                border-color: transparent;
+                padding: 0.4rem 2rem;
+                border-radius: $border-radius;
+            }
+        }
+    }
+}

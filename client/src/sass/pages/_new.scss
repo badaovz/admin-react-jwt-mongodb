@@ -1,0 +1,95 @@
+.new {
+    &__title {
+        padding: 1rem;
+        box-shadow: $box-shadow-light;
+        text-align: center;
+        font-size: 2rem;
+        color: $txt-color-second;
+    }
+
+    &__content {
+        padding: 1rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0 2rem;
+        place-items: center;
+
+        @include mobile {
+            grid-template-columns: 1fr;
+            gap: 2rem 0;
+        }
+    }
+
+    &__image {
+        text-align: center;
+    }
+
+    &__label {
+        cursor: pointer;
+        margin-bottom: 1rem;
+        color: $txt-color-second;
+        text-transform: capitalize;
+        @include flex(center, center);
+        span {
+            font-size: 1.5rem;
+            margin-right: 0.5rem;
+        }
+    }
+
+    &__img {
+        padding: 2rem;
+        cursor: pointer;
+        object-fit: cover;
+        width: 80% !important;
+        height: 80% !important;
+        color: $gray-color-dark;
+        background-color: $gray-color-light;
+
+        &.active {
+            padding: unset;
+            border-radius: $border-radius;
+            box-shadow: $box-shadow-light;
+        }
+    }
+
+    &__form {
+        width: 100%;
+        padding: 2rem 4rem;
+        box-shadow: $box-shadow-dark;
+
+        .form-group {
+            &__item {
+                margin: 1rem 0;
+            }
+
+            &__label {
+                font-size: 1rem;
+                margin-bottom: 0.5rem;
+                color: $txt-color-second;
+                text-transform: capitalize;
+            }
+
+            &__input {
+                width: 100%;
+                border: none;
+                padding: 0.3rem;
+                font-size: 1rem;
+                outline-color: $blue-color;
+                border-bottom: 1px solid $txt-color-second;
+            }
+
+            &__btn {
+                display: block;
+                width: 100%;
+                border: none;
+                font-size: 1rem;
+                margin-top: 1rem;
+                padding: 0.5rem 4rem;
+                color: $white-color;
+                text-transform: capitalize;
+                background-color: $blue-color;
+                border-radius: $border-radius;
+            }
+        }
+    }
+}

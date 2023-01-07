@@ -1,0 +1,111 @@
+.navbar {
+    height: $nav-hight;
+    display: flex;
+    align-items: center;
+    background-color: rgb(231, 229, 229);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    &__menu-logo {
+        @include flex(center, space-between);
+    }
+
+    &__logo {
+        @include flex(center, start);
+        color: $txt-color-second;
+        // padding: 0 1rem;
+        width: 200px;
+        cursor: pointer;
+        span {
+            font-size: 2rem;
+        }
+
+        @include mobile {
+            display: none;
+        }
+    }
+
+    &__menu {
+        display: none;
+        padding: 0 1rem;
+        color: $txt-color-second;
+
+        @include mobile-tablet {
+            display: flex;
+        }
+    }
+
+    &__container {
+        flex: 1;
+        @include flex(center, space-between);
+
+        // @include mobile-tablet {
+        //     display: none;
+        // }
+
+        // &__search {
+        //     position: relative;
+        //     color: $txt-color-primary;
+
+        //     &__input {
+        //         height: 2rem;
+        //         padding-left: 1rem;
+        //         border: 1px solid $txt-color-second;
+        //         outline: none;
+        //         color: $txt-color-primary;
+        //     }
+        //     span {
+        //         position: absolute;
+        //         // font-size: 1rem;
+        //         right: 0;
+        //         top: 4px;
+        //         padding-right: 0.5rem;
+        //         cursor: pointer;
+
+        //         &:hover {
+        //             color: $txt-color-second;
+        //         }
+        //     }
+        // }
+    }
+    &__right {
+        @include flex(center, center);
+        color: $txt-color-second;
+    }
+
+    &__item {
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin-left: 1rem;
+        cursor: pointer;
+        &:last-child {
+            padding-right: 1rem;
+        }
+        span {
+            position: absolute;
+            text-align: center;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: $red-color-dark;
+            color: $white-color;
+            font-size: 0.8rem;
+            top: -4px;
+            right: -4px;
+        }
+
+        img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    }
+
+    &--dark {
+        background-color: $dark-mode-color;
+        border-bottom: 1px solid #c2e0ff14;
+    }
+}

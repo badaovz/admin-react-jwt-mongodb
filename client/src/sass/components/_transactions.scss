@@ -1,0 +1,52 @@
+.transactions {
+    box-shadow: $box-shadow-light;
+    padding: 1rem 0;
+
+    @include mobile {
+        overflow: auto;
+        max-width: 95vw;
+        margin: 0 auto;
+    }
+
+    &__title {
+        font-size: 1rem;
+        color: $txt-color-second;
+        text-transform: capitalize;
+        padding-left: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    &__tableCell {
+        &.Approved {
+            color: $green-color-dark;
+            background-color: $green-color-light;
+            padding: 0.3rem;
+            border-radius: $border-radius;
+        }
+
+        &.Pending {
+            color: $orange-color-dark;
+            background-color: $orange-color-light;
+            padding: 0.3rem;
+            border-radius: $border-radius;
+        }
+    }
+
+    &__cellWrapper {
+        @include flex(center, center);
+    }
+
+    &__img {
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-right: 0.5rem;
+    }
+
+    &--dark {
+        .transactions__tableCell {
+            background-color: $dark-mode-color;
+        }
+    }
+}

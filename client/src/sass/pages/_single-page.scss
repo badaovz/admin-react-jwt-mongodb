@@ -1,0 +1,20 @@
+.singlePage {
+    // padding: 1rem;
+    @include mobile-tablet {
+        margin: 0 auto;
+    }
+    
+    &__container {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 0 2rem;
+
+        @include mobile {
+            grid-template-columns: 1fr;
+            gap: 2rem 0;
+            max-width: 95vw;
+        }
+
+    }
+
+}

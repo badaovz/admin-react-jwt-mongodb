@@ -1,0 +1,90 @@
+.notify {
+    position: absolute;
+    top: 150%;
+    right: -2rem;
+    width: 30rem;
+    background-color: $white-color;
+    border-radius: 0.2rem;
+    border: 0.1rem solid $gray-color-dark;
+    box-shadow: 0.1rem 0.1rem 0.1rem rgba(255, 255, 255, 0.7);
+    transform-origin: calc(100% - 30px) top;
+    animation: notifyAnimationGrowth ease-in 0.3s;
+    display: none;
+    z-index: 1;
+
+    @include mobile-tablet {
+        width: 80vw;
+    }
+
+    &.active {
+        display: block;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: -1.6rem;
+        right: 1.7rem;
+        border-style: solid;
+        border-width: 0.8rem 1rem;
+        border-color: transparent transparent $bg-color-light transparent;
+        display: block;
+        z-index: -10;
+    }
+
+    &__title {
+        color: $icon-color-light;
+        font-size: 1.4rem;
+        margin: 0.8rem;
+    }
+
+    &__list {
+        padding: 0;
+    }
+
+    &__footer {
+        width: 100%;
+        text-align: center;
+
+        border-top: 0.1rem solid rgb(243, 243, 243);
+
+        p {
+            color: $icon-color-light;
+            font-weight: bold;
+            font-size: 1.4rem;
+        }
+    }
+
+    &--dark {
+        background-color: $dark-mode-color;
+        color: $dark-mode-color;
+        border-color: $dark-border-color;
+        box-shadow: unset;
+
+        &::after {
+            border-color: transparent transparent $dark-border-color transparent;
+        }
+
+        // &::before {
+        //     content: '';
+        //     position: absolute;
+        //     top: -2.6rem;
+        //     right: 0;
+        //     border-style: solid;
+        //     border-width: 2rem 2.6rem;
+        //     border-color: transparent transparent currentColor transparent;
+        //     display: block;
+        // }
+    }
+}
+
+@keyframes notifyAnimationGrowth {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
