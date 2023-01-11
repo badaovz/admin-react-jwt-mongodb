@@ -1,13 +1,14 @@
 .sidebar {
-    width: $sidebar-width;
+    width: var(--sidebar-width);
     height: calc(100vh - 4rem);
-    box-shadow: $box-shadow;
+    box-shadow: var(--box-shadow);
     padding: 1rem 0 1rem 1rem;
     overflow: auto;
     display: flex;
     position: -webkit-sticky;
     position: sticky;
     top: 4rem;
+    background-color: var(--mode-color);
 
     &.active {
         transform: translateX(0);
@@ -15,12 +16,12 @@
 
     @include mobile-tablet {
         position: fixed;
-        top: $nav-hight;
+        top: var(--nav-hight);
         left: 0;
         z-index: 10;
-        background-color: $white-color;
+        background-color: var(--white-color);
         transform: translateX(-120%);
-        transition: $transition;
+        transition: var(--transition);
 
         // position: -webkit-sticky;
         // position: sticky;
@@ -29,7 +30,7 @@
 
     &__icon {
         font-size: 1rem;
-        color: $red-color-dark;
+        color: var(--red-color-dark);
         position: absolute;
         top: 1.5rem;
         right: 1rem;
@@ -43,21 +44,21 @@
     &__name {
         text-transform: uppercase;
         font-size: 1rem;
-        color: $txt-color-second;
+        color: var(--txt-color-second);
         margin-top: 0.5rem;
     }
 
     &__content {
         padding-left: 0.5rem;
         @include flex(center, start);
-        color: $txt-color-second;
+        color: var(--txt-color-second);
         text-transform: capitalize;
         font-size: 1rem;
         margin-bottom: 0.5rem;
         cursor: pointer;
         border-radius: 5px;
         &:hover {
-            background-color: $btn-hover-color;
+            background-color: var(--mode-color-hover);
         }
         span {
             display: flex;
@@ -66,38 +67,7 @@
         }
 
         &.active {
-            background-color: $btn-hover-color;
-        }
-    }
-
-    &--dark {
-        background-color: $dark-mode-color;
-        .sidebar {
-            &__content {
-                &:hover {
-                    background-color: $dark-mode-color-hover;
-                }
-
-                &.active {
-                    background-color: $dark-mode-color-hover;
-                }
-            }
+            background-color: var(--mode-color-hover);
         }
     }
 }
-
-// .dark.sidebar,
-// .dark.sidebar.active {
-//     background-color: $dark-mode-color;
-//     .sidebar__container__item {
-//         &__content {
-//             &:hover {
-//                 background-color: $dark-mode-color-hover;
-//             }
-
-//             &.active {
-//                 background-color: $dark-mode-color-hover;
-//             }
-//         }
-//     }
-// }

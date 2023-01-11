@@ -1,10 +1,10 @@
 .new {
     &__title {
         padding: 1rem;
-        box-shadow: $box-shadow-light;
+        box-shadow: var(--box-shadow-light);
         text-align: center;
         font-size: 2rem;
-        color: $txt-color-second;
+        color: var(--txt-color-second);
     }
 
     &__content {
@@ -27,7 +27,7 @@
     &__label {
         cursor: pointer;
         margin-bottom: 1rem;
-        color: $txt-color-second;
+        color: var(--txt-color-second);
         text-transform: capitalize;
         @include flex(center, center);
         span {
@@ -42,20 +42,20 @@
         object-fit: cover;
         width: 80% !important;
         height: 80% !important;
-        color: $gray-color-dark;
-        background-color: $gray-color-light;
+        color: var(--gray-color-dark);
+        background-color: var(--gray-color-light);
 
         &.active {
             padding: unset;
-            border-radius: $border-radius;
-            box-shadow: $box-shadow-light;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow-light);
         }
     }
 
     &__form {
         width: 100%;
         padding: 2rem 4rem;
-        box-shadow: $box-shadow-dark;
+        box-shadow: var(--box-shadow-dark);
 
         .form-group {
             &__item {
@@ -65,7 +65,7 @@
             &__label {
                 font-size: 1rem;
                 margin-bottom: 0.5rem;
-                color: $txt-color-second;
+                color: var(--txt-color-second);
                 text-transform: capitalize;
             }
 
@@ -74,8 +74,8 @@
                 border: none;
                 padding: 0.3rem;
                 font-size: 1rem;
-                outline-color: $blue-color;
-                border-bottom: 1px solid $txt-color-second;
+                outline-color: var(--blue-color);
+                border-bottom: 1px solid var(--txt-color-second);
             }
 
             &__btn {
@@ -85,10 +85,10 @@
                 font-size: 1rem;
                 margin-top: 1rem;
                 padding: 0.5rem 4rem;
-                color: $white-color;
+                color: var(--white-color);
                 text-transform: capitalize;
-                background-color: $blue-color;
-                border-radius: $border-radius;
+                background-color: var(--blue-color);
+                border-radius: var(--border-radius);
             }
         }
     }

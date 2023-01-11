@@ -16,13 +16,13 @@
 }
 
 .widget {
-    border-radius: $border-radius;
-    box-shadow: $box-shadow-light;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow-light);
     padding: 1rem;
 
     &__header {
         @include flex(center, space-between);
-        color: $txt-color-primary;
+        color: var(--txt-color-primary);
     }
 
     &__title {
@@ -38,7 +38,7 @@
 
     &__total {
         font-size: 2rem;
-        color: $txt-color-second;
+        color: var(--txt-color-second);
     }
 
     &__footer {
@@ -46,7 +46,7 @@
     }
 
     &__text {
-        border-bottom: 1px solid $txt-color-second;
+        border-bottom: 1px solid var(--txt-color-second);
         cursor: pointer;
         &:hover {
             color: green;
@@ -58,7 +58,7 @@
         display: flex;
         align-items: center;
         padding: 0.2rem;
-        border-radius: $border-radius;
+        border-radius: var(--border-radius);
         cursor: pointer;
     }
 }

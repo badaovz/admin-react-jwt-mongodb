@@ -13,6 +13,16 @@ body {
     overflow-x: hidden;
 }
 
+body.dark {
+    --mode-color: #0a1929;
+    --white-color-light: #0a1929;
+    --mode-color-hover: #3399ff14;
+    --txt-color-second: #66b2ff;
+    --border-color: #132f4c;
+    --after-notify-color: #132f4c;
+    --txt-color-primary: #e7e5e5;
+}
+
 a {
     text-decoration: none;
     color: unset;
@@ -38,7 +48,7 @@ main {
 .icon {
     width: 24px;
     height: 24px;
-    color: $txt-color-second;
+    color: var(--txt-color-second);
 
     &--large {
         width: 40px !important;

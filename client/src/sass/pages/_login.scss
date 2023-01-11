@@ -1,9 +1,10 @@
 .login {
     padding: 1rem 2rem;
-    box-shadow: $box-shadow-light;
+    box-shadow: var(--box-shadow-light);
     min-width: 500px;
     text-align: center;
     margin-top: 4rem;
+    // border: 1px solid var(--border-color);
 
     @include mobile-tablet {
         min-width: 90vw;
@@ -11,7 +12,7 @@
 
     &__title {
         font-size: 1.5rem;
-        color: $txt-color-second;
+        color: var(--txt-color-second);
         margin-bottom: 1rem;
         text-align: center;
     }
@@ -25,7 +26,7 @@
             &__label {
                 display: block;
                 font-size: 1rem;
-                color: $txt-color-second;
+                color: var(--txt-color-second);
             }
 
             &__input {
@@ -40,7 +41,7 @@
                 position: absolute;
                 top: 0;
                 right: 0;
-                color: $txt-color-primary;
+                color: var(--txt-color-primary);
                 padding: 0.2rem 2rem 0 0;
                 display: none;
                 cursor: pointer;
@@ -57,7 +58,7 @@
 
             &__more {
                 font-size: 0.8rem;
-                color: $blue-color;
+                color: var(--blue-color);
                 @include flex(center, space-between);
                 margin-bottom: 2rem;
                 cursor: pointer;
@@ -66,11 +67,11 @@
             &__btn {
                 font-size: 1rem;
                 letter-spacing: 0.1rem;
-                color: $white-color;
-                background-color: $blue-color;
+                color: var(--white-color);
+                background-color: var(--blue-color);
                 border-color: transparent;
                 padding: 0.4rem 2rem;
-                border-radius: $border-radius;
+                border-radius: var(--border-radius);
             }
         }
     }

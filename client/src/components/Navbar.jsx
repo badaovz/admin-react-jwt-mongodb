@@ -12,6 +12,7 @@ import defaultImage from '../assets/no-image.png';
 import { messages, notifies } from '../data';
 import { messageToggle, modeToggle, notifyToggle, openSidebar } from '../redux/deferenceSlice';
 import Notify from './Notify';
+import { useEffect } from 'react';
 
 const Navbar = () => {
     const user = useSelector((state) => state.auth.login?.currentUser);
@@ -41,8 +42,16 @@ const Navbar = () => {
         dispatch(modeToggle())
     }
 
+    useEffect(() => {
+        if(isDarkMode) {
+            document.body.classList.add('dark')
+        }else {
+            document.body.classList.remove('dark')
+        }
+    }, [isDarkMode])
+
     return (
-        <div className={`navbar navbar--${isDarkMode&&'dark'}`}>
+        <div className={`navbar`}>
             <div className='navbar__menu-logo'>
                 {user && (
                     <span

@@ -1,12 +1,13 @@
 .chart {
-    box-shadow: $box-shadow-light;
+    box-shadow: var(--box-shadow-light);
     @include mobile-tablet {
         max-width: 95vw;
     }
     &__title {
+        margin-top: 24px;
         margin-left: 20px;
         font-size: 1rem;
-        color: $txt-color-second;
+        color: var(--txt-color-second);
         margin-bottom: 1rem;
     }
 }

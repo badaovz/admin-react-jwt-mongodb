@@ -1,10 +1,4 @@
 .layout {
-    &--dark {
-        background-color: $dark-mode-color;
-        color: $bg-color-light;
-    }
-
-    // &__outlet {
-    //     margin-inline: auto;
-    // }
+    background-color: var(--mode-color);
+    color: var(--txt-color-primary);
 }

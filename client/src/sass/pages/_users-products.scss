@@ -17,13 +17,13 @@
 
     &__btn {
         padding: 0.5rem 2rem;
-        color: $green-color-dark;
-        border-radius: $border-radius;
-        background-color: $green-color-light;
+        color: var(--green-color-dark);
+        border-radius: var(--border-radius);
+        background-color: var(--green-color-light);
 
         &:hover {
-            color: $white-color;
-            background-color: $green-color-dark;
+            color: var(--white-color);
+            background-color: var(--green-color-dark);
         }
     }
 
@@ -54,21 +54,21 @@
 .cellWithStatus {
     &.active {
         padding: 0.3rem;
-        color: $green-color-dark;
-        border-radius: $border-radius;
-        background-color: $green-color-light;
+        color: var(--green-color-dark);
+        border-radius: var(--border-radius);
+        background-color: var(--green-color-light);
     }
     &.passive {
         padding: 0.3rem;
-        color: $red-color-dark;
-        border-radius: $border-radius;
-        background-color: $red-color-light;
+        color: var(--red-color-dark);
+        border-radius: var(--border-radius);
+        background-color: var(--red-color-light);
     }
     &.pending {
         padding: 0.3rem;
-        color: $orange-color-dark;
-        border-radius: $border-radius;
-        background-color: $orange-color-light;
+        color: var(--orange-color-dark);
+        border-radius: var(--border-radius);
+        background-color: var(--orange-color-light);
     }
 }
 
@@ -76,15 +76,15 @@
     &__viewBtn {
         padding: 0.3rem;
         font-size: 1rem;
-        color: $blue-color;
+        color: var(--blue-color);
         margin-right: 0.5rem;
         text-transform: capitalize;
-        border: 1px dotted $blue-color;
-        border-radius: $border-radius;
+        border: 1px dotted var(--blue-color);
+        border-radius: var(--border-radius);
 
         &:hover {
-            color: $white-color;
-            background-color: $blue-color;
+            color: var(--white-color);
+            background-color: var(--blue-color);
         }
     }
 
@@ -92,13 +92,13 @@
         padding: 0.3rem;
         font-size: 1rem;
         cursor: pointer;
-        color: $red-color-dark;
+        color: var(--red-color-dark);
         background-color: transparent;
-        border-radius: $border-radius;
-        border: 1px dotted $red-color-dark;
+        border-radius: var(--border-radius);
+        border: 1px dotted var(--red-color-dark);
         &:hover {
-            color: $white-color;
-            background-color: $red-color-dark;
+            color: var(--white-color);
+            background-color: var(--red-color-dark);
         }
     }
 }

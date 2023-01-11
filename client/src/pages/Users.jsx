@@ -32,7 +32,7 @@ const Users = () => {
         setData(userList)
     }, [userList])
 
-
+    console.log('ssss sss ss sss sss ss sss sss sss sss sss')
 
     // const handleDelete = useCallback((id) => {
     //     console.log('tao moi handleDelete')

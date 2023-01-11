@@ -1,9 +1,10 @@
 .navbar {
-    height: $nav-hight;
+    height: var(--nav-hight);
     display: flex;
     align-items: center;
-    background-color: rgb(231, 229, 229);
+    background-color: var(--white-color-light);
     position: sticky;
+    border-bottom: 1px solid #c2e0ff14;
     top: 0;
     z-index: 100;
 
@@ -13,7 +14,7 @@
 
     &__logo {
         @include flex(center, start);
-        color: $txt-color-second;
+        color: var(--txt-color-second);
         // padding: 0 1rem;
         width: 200px;
         cursor: pointer;
@@ -29,7 +30,7 @@
     &__menu {
         display: none;
         padding: 0 1rem;
-        color: $txt-color-second;
+        color: var(--txt-color-second);
 
         @include mobile-tablet {
             display: flex;
@@ -46,14 +47,14 @@
 
         // &__search {
         //     position: relative;
-        //     color: $txt-color-primary;
+        //     color: var(--txt-color-primary);
 
         //     &__input {
         //         height: 2rem;
         //         padding-left: 1rem;
-        //         border: 1px solid $txt-color-second;
+        //         border: 1px solid var(--txt-color-second);
         //         outline: none;
-        //         color: $txt-color-primary;
+        //         color: var(--txt-color-primary);
         //     }
         //     span {
         //         position: absolute;
@@ -64,14 +65,14 @@
         //         cursor: pointer;
 
         //         &:hover {
-        //             color: $txt-color-second;
+        //             color: var(--txt-color-second);
         //         }
         //     }
         // }
     }
     &__right {
         @include flex(center, center);
-        color: $txt-color-second;
+        color: var(--txt-color-second);
     }
 
     &__item {
@@ -89,8 +90,8 @@
             width: 16px;
             height: 16px;
             border-radius: 50%;
-            background-color: $red-color-dark;
-            color: $white-color;
+            background-color: var(--red-color-dark);
+            color: var(--white-color);
             font-size: 0.8rem;
             top: -4px;
             right: -4px;
@@ -102,10 +103,5 @@
             border-radius: 50%;
             object-fit: cover;
         }
-    }
-
-    &--dark {
-        background-color: $dark-mode-color;
-        border-bottom: 1px solid #c2e0ff14;
     }
 }

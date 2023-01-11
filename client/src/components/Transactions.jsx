@@ -1,18 +1,16 @@
-import { transactions } from '../data';
+import Paper from "@mui/material/Paper";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
 import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
-import Paper from "@mui/material/Paper";
-import { useSelector } from 'react-redux';
+import { transactions } from '../data';
 
 const Transactions = () => {
-    const isDarkMode = useSelector(state => state.def.isDarkMode);
 
     return (
-        <div className={`transactions transactions--${isDarkMode&&'dark'}`}>
+        <div className='transactions'>
             <p className='transactions__title'>latest transactions</p>
             <TableContainer component={Paper} className="transactions__container">
                 <Table sx={{ minWidth: 650 }} aria-label="simple table">

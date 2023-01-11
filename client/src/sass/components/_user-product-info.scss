@@ -1,24 +1,25 @@
 .compInfo {
     position: relative;
-    box-shadow: $box-shadow-light;
+    box-shadow: var(--box-shadow-light);
     padding: 1.5rem 1rem;
     text-align: center;
-    border-radius: $border-radius;
-    color: $txt-color-second;
+    border-radius: var(--border-radius);
+    color: var(--txt-color-primary);
 
     &__edit {
         position: absolute;
         top: 0;
         right: 0;
         padding: 0.2rem;
-        // color: $icon-color-light;
-        background-color: $violet-color-light;
-        border-bottom-left-radius: $border-radius;
+        // color: var(--icon-color-light;
+        background-color: var(--violet-color-light);
+        border-bottom-left-radius: var(--border-radius);
     }
 
     &__title {
         font-size: 1.5rem;
-        // color: $txt-color-second;
+        color: var(--txt-color-second);
+        // text-transform: uppercase;
         margin-bottom: 0.5rem;
     }
 
@@ -39,12 +40,25 @@
     &__content {
         text-align: start;
         font-size: 1rem;
-        // color: $black-color;
+        // color: var(--black-color);
 
-        span,
-        h3 {
-            color: $txt-color-second;
-            font-weight: bold;
+        p {
+            color: var(--txt-color-primary);
         }
+
+        h3 {
+            // font-weight: bold;
+            color: var(--txt-color-second);
+            // text-transform: uppercase;
+        }
+        // span,
+        // h3 {
+        //     color: var(--txt-color-primary);
+        //     font-weight: bold;
+        // }
+
+        // h3 {
+        //     color: var(--txt-color-second);
+        // }
     }
 }

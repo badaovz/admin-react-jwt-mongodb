@@ -1,14 +1,11 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
-import NotifyItem from './NotifyItem';
 import { Link } from 'react-router-dom';
+import NotifyItem from './NotifyItem';
 
 function Notify({title, status = false, data = [], link}) {
-    // const isNotifyOpen = useSelector(state => state.def.isNotifyOpen)
-    const isDarkMode = useSelector(state => state.def.isDarkMode)
 
     return (
-        <div className={`notify ${status&&'active'} notify--${isDarkMode&&'dark'}`}>
+        <div className={`notify ${status&&'active'} `}>
             <h3 className='notify__title'>{title}</h3>
             <ul className='notify__list'>
                 {

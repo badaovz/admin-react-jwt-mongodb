@@ -2,12 +2,12 @@
     padding: 2rem;
     display: inline-block;
     margin-top: 4rem;
-    box-shadow: $box-shadow-light;
+    box-shadow: var(--box-shadow-light);
     text-align: center;
 
     &__title {
         font-size: 1.5rem;
-        color: $txt-color-second;
+        color: var(--txt-color-second);
         margin-bottom: 1rem;
         text-transform: capitalize;
     }
@@ -18,25 +18,25 @@
                 display: block;
                 font-size: 1rem;
                 text-align: start;
-                color: $txt-color-second;
+                color: var(--txt-color-second);
             }
 
             &__input {
                 display: block;
                 font-size: 1rem;
-                color: $txt-color-second;
+                color: var(--txt-color-second);
                 margin: 1rem 0;
                 width: 100%;
                 padding: 0.2rem 0.5rem;
-                outline-color: $blue-color;
+                outline-color: var(--blue-color);
             }
 
             &__btn {
                 padding: 0.2rem 1rem;
                 border-color: transparent;
-                border-radius: $border-radius;
-                color: $white-color;
-                background-color: $blue-color;
+                border-radius: var(--border-radius);
+                color: var(--white-color);
+                background-color: var(--blue-color);
             }
 
             &__login {
