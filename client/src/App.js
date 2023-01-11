@@ -1,4 +1,4 @@
-import { ThemeProvider, createTheme, useTheme } from '@mui/material/styles';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { useMemo } from 'react';
 import { useSelector } from 'react-redux';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
@@ -18,9 +18,6 @@ function App() {
     const user = useSelector((state) => state.auth.login?.currentUser);
     let userList = useSelector((state) => state.users.users?.allUsers);
     const isDarkMode = useSelector((state) => state.def.isDarkMode);
-    const th = useTheme();
-    // const [mode, setMode]
-    // let theme;
 
     const theme = useMemo(
         () =>
@@ -42,6 +39,8 @@ function App() {
             }),
         [isDarkMode],
     );
+
+    console.log('log ')
 
     return (
         <ThemeProvider theme={theme}>
