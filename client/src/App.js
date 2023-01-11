@@ -40,8 +40,6 @@ function App() {
         [isDarkMode],
     );
 
-    console.log('log ss')
-
     return (
         <ThemeProvider theme={theme}>
             <Router>
